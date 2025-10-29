@@ -1,7 +1,7 @@
 library(dplyr)
 
 # 读取文件
-df1 <- read.csv("/mnt/8w/data4/yiyuan/Bone/scATAC/result/Sy/Save-ProjHeme3_group/markerList_HA_anno_promoter.tsv", sep = "\t", stringsAsFactors = FALSE)
+df1 <- read.csv("/mnt/8w/data4/yiyuan/Bone/scATAC/result/Sy/Save-ProjHeme5_group/markerList_HA_anno_promoter.tsv", sep = "\t", stringsAsFactors = FALSE)
 df2 <- read.csv("/mnt/8w/data7/yiyuan/Bone/test1/Fibroblasts/new/DEGs/Fb滑膜_all.markers_gname.csv", stringsAsFactors = FALSE)
 
 # 去除前后空格并转换为大写
@@ -27,21 +27,21 @@ if ("ARF1" %in% common_genes) {
 # 筛选出 symbol 在 common_genes 中的行
 bed_data <- subset(df1, SYMBOL %in% common_genes)
 # 保存为 BED 文件
-write.table(bed_data, file = "/mnt/8w/data4/yiyuan/Bone/scATAC/result/Sy/Save-ProjHeme3_group/common_genes.tsv", sep = "\t", quote = FALSE, row.names = FALSE, col.names = FALSE)
+write.table(bed_data, file = "/mnt/8w/data4/yiyuan/Bone/scATAC/result/Sy/Save-ProjHeme5_group/common_genes.tsv", sep = "\t", quote = FALSE, row.names = FALSE, col.names = FALSE)
 
 # 选择并重命名列为 BED 格式所需的列名
 bed_data1 <- bed_data[, c('seqnames', 'start', 'end')]
 colnames(bed_data1) <- c('seqnames', 'start', 'end')
 
 # 保存为 BED 文件
-write.table(bed_data1, file = "/mnt/8w/data4/yiyuan/Bone/scATAC/result/Sy/Save-ProjHeme3_group/common_genes.bed", sep = "\t", quote = FALSE, row.names = FALSE, col.names = FALSE)
+write.table(bed_data1, file = "/mnt/8w/data4/yiyuan/Bone/scATAC/result/Sy/Save-ProjHeme5_group/common_genes.bed", sep = "\t", quote = FALSE, row.names = FALSE, col.names = FALSE)
 
 
 
 library(dplyr)
 
 # 读取文件
-df1 <- read.csv("/mnt/8w/data4/yiyuan/Bone/scATAC/result/Ch/Save-ProjHeme5_group/markerList_HA_0.7_anno_promoter.tsv", sep = "\t", stringsAsFactors = FALSE)
+df1 <- read.csv("/mnt/8w/data4/yiyuan/Bone/scATAC/result/Ch/Save-ProjHeme5_group/markerList_HA_anno_promoter.tsv", sep = "\t", stringsAsFactors = FALSE)
 df2 <- read.csv("/mnt/8w/data7/yiyuan/Bone/test/Ch/Re_subtype/DEGs/Ch_all.markers_group.csv", stringsAsFactors = FALSE)
 
 # 去除前后空格并转换为大写
