@@ -1,0 +1,1 @@
+This project aims to systematically analyze single-cell RNA sequencing (scRNA-seq) and single-cell chromatin accessibility sequencing (scATAC-seq) data derived from cartilage and synovial tissues of arthritis-related samples, including those from hemophilia (HA) and osteoarthritis (OA) patients.
